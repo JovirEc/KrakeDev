@@ -17,3 +17,8 @@ calcularTotal = function(subtotal,descuento,iva){
     let valorTotal = (subtotal - descuento) + iva;
     return valorTotal;
 }
+
+mostrarResumen = function(producto,cantidad,descuento,total){
+    let resumen = "Usted compró "+cantidad+" unidades de "+producto+" con un descuento del "+descuento+"% por un total de: $"+total;
+    return resumen;
+}

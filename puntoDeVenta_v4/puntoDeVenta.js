@@ -9,6 +9,7 @@ calcularValorTotal = function(){
     let valorDescuento;
     let valorIVA;
     let valorTotal;
+    let resumen;
     //1. Recuperar el nombre del producto como String
     nombreProducto = recuperarTexto("txtProducto");
     //2. Recuperar el precio como float
@@ -70,6 +71,8 @@ calcularValorTotal = function(){
                 Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
             Si funciona, hacer un commit
         */ 
+    resumen = mostrarResumen(nombreProducto,cantidad,porcentajeDescuento,valorTotal);
+    mostrarTexto("lblResumen",resumen);
     
 }   
 limpiar=function(){
