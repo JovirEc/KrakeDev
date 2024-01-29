@@ -39,14 +39,10 @@ modificarPuntos = function(numero){
     puntos = puntos + numero;
     cambiarTexto("lblPuntos",puntos);
 }
-
 modificarLanzamientos = function(){
     lanzamientos = lanzamientos - 1;
     cambiarTexto("lblLanzamientos",lanzamientos);
 }
-//Función mostrarCara, recibe el numero que quiere mostrar
-//muestra la imagen correspondiente al número que recibe
-//no retorna nada
 mostrarCara = function(numero){
     if(numero == 1){
         cambiarImagen("imgDados","dados1.png");
@@ -61,7 +57,6 @@ mostrarCara = function(numero){
     }else if(numero == 6){
         cambiarImagen("imgDados","dados6.png");
     }
-    
 }
 lanzarDado=function(){
     let aleatorio;
