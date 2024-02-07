@@ -98,21 +98,4 @@ esNotaValida = function(nota,idComponenteError){
         mostrarTexto(idComponenteError,"");
     }
     return !hayErrores
-
-
-
-
-    if(isNaN(nota)){
-        mostrarTexto(idComponenteError,"Debe ingresar un numero");
-        hayErrores = true;
-    }else{
-        if(nota>=0 && nota<=10){
-            mostrarTexto(idComponenteError,"");
-            return true;
-        }else{
-            mostrarTexto(idComponenteError,"El numero debe estar entre 0 y 10");
-            return false;
-        }
-
-    }
 }

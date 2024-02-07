@@ -16,7 +16,6 @@ calcularTasaInteres = function(ingresoAnual){
     }else{
         tasaInteres = 12;
         return tasaInteres;
-        //Pregunta: ¿Es mejor colocar un solo "return" fuera de la condición y evitar repetirlos dentro del mismo?
     }
 }
 
