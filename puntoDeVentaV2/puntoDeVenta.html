@@ -5,30 +5,53 @@
         <script src="serviciosPuntoDeVenta.js"></script>
         <script src="puntoDeVenta.js"></script>
         <script src="utilitarios.js"></script>
+        <link rel="stylesheet" href="puntoDeVenta.css">
     </head>
     <body>
-        <h3>Ingrese el nombre del producto</h3>
-        <input type="text" id="txtProducto"/>
-        <div id="lblErrorProducto"></div>
-        <h3>Ingrese la cantidad a comprar</h3>
-        <input type="text" id="txtCantidad"/>
-        <div id="lblErrorCantidad"></div>
-        <h3>Ingrese el precio del producto</h3>
-        <input type="text" id="txtPrecio"/>
-        <div id="lblErrorPrecio"></div>
-        <h3>Subtotal</h3>
-        <h3 id="lblSubtotal">0.0</h3>
-        <h3>Descuento</h3>
-        <h3 id="lblDescuento">0.0</h3>
-        <h3>IVA 12%</h3>
-        <h3 id="lblValorIVA">0.0</h3>
-        <h3>Total</h3>
-        <h3 id="lblTotal">0.0</h3>
-        <h2 id="lblResumen">Resumen</h2>
-        <input type="button" value="CALCULAR TOTAL" 
-        onclick="calcularValorTotal();"/>
-        <input type="button" value="LIMPIAR" 
-        onclick="limpiar();"/>
-    
+        <div class="principal">
+            <div class="contenedor2">
+            <!-- LOGO -->
+                <div class="partLogo">
+                    <img src="./imagenes/logoKrakeDev.png" class="logo">
+                </div>
+            <!-- DATOS -->
+                <div class="partDatos">
+                    <b class="titulo">PUNTO DE VENTA</b>
+                    <div class="tituloCaja">PRODUCTO</div>
+                    <div>
+                        <input type="text" id="txtProducto"/>
+                        <div id="lblErrorProducto" class="error"></div>
+                    </div>
+                    <div class="tituloCaja">CANTIDAD</div>
+                    <div>
+                        <input type="text" id="txtCantidad"/>
+                        <div id="lblErrorCantidad"></div>
+                    </div>
+                    <div class="tituloCaja">PRECIO</div>
+                    <div>
+                        <input type="text" id="txtPrecio"/>
+                        <div id="lblErrorPrecio"></div>
+                       </div>
+                    <input type="button" value="CALCULAR TOTAL" onclick="calcularValorTotal();"/>
+                    <input type="button" value="LIMPIAR" onclick="limpiar();"/>
+                </div>
+            <!-- RESULTADOS -->
+                <div class="partResultado">
+                    <div id="lblErrorPrecio"></div>
+                    <div>Subtotal</div>
+                    <div id="lblSubtotal">0.0</div>
+                    <div>Descuento</div>
+                    <div id="lblDescuento">0.0</div>
+                    <div>IVA 12%</div>
+                    <div id="lblValorIVA">0.0</div>
+                    <div>Total</div>
+                    <div id="lblTotal">0.0</div>
+                    
+                </div>
+            </div>
+            <!--<div class="divResumen">
+                <h2 id="lblResumen">Resumen</h2>
+            </div>-->
+        </div>
     </body> 
 </html>

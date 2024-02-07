@@ -1,0 +1,46 @@
+body{
+    background-image: url(./imagenes/background.jpg);
+    background-size: cover;
+}
+.principal{
+    background-color: crimson;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.contenedor2{
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+}
+
+.partLogo{
+    background-color: aqua;
+    padding: 10px;
+}
+    .logo{
+        width: 300px;
+    }
+.partDatos{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    .titulo{
+        font-size: 20px;
+    }
+    .tituloCaja{
+        color: aliceblue;
+    }
+
+.partResultado{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
