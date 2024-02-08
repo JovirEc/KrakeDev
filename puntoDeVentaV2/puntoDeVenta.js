@@ -12,7 +12,7 @@ calcularValorTotal = function(){
     cantidad       = recuperarInt   ("txtCantidad");
     precioProducto = recuperarFloat ("txtPrecio");
 
-    if(esProductoValido (nombreProducto,"lblErrorProducto") & esCantidadValida (cantidad,      "lblErrorCantidad") & esPrecioValido   (precioProducto,"lblErrorPrecio")){
+    if(esProductoValido (nombreProducto,"lblErrorProducto") & esCantidadValida (cantidad,"lblErrorCantidad") & esPrecioValido(precioProducto,"lblErrorPrecio")){
             valorSubtotal = calcularSubtotal(precioProducto,cantidad);
             mostrarTexto("lblSubtotal",valorSubtotal);
 
@@ -33,11 +33,11 @@ calcularValorTotal = function(){
 esProductoValido = function(producto,idComponenteError){
     let hayError = false;
     if(producto.length == 0){
-        mostrarTexto(idComponenteError,"*Campo Obligatorio")
+        mostrarTexto(idComponenteError,"*CAMPO OBLIGATORIO")
         hayError = true;
     }
     if(producto.length < 0 || producto.length > 10){
-        mostrarTexto(idComponenteError,"*Cantidad debe ser entre 1 y 10");
+        mostrarTexto(idComponenteError,"*NOMBRE MAXIMO DE 10 CARACTERES");
         hayError = true;
     }
     if(hayError == false){
@@ -50,11 +50,11 @@ esCantidadValida = function(cantidad,idComponenteError){
     let hayError = false;
 
     if(isNaN(cantidad)){
-        mostrarTexto(idComponenteError,"*Campo Obligatorio")
+        mostrarTexto(idComponenteError,"*CAMPO OBLIGATORIO")
         hayError = true;
     }
     if(cantidad < 0 || cantidad > 100){
-        mostrarTexto(idComponenteError,"Cantidad debe ser entre 1 y 100")
+        mostrarTexto(idComponenteError,"*CANTIDAD DEBE SER ENTRE 1 Y 100")
         hayError = true;
     }
     if(hayError == false){
@@ -66,11 +66,11 @@ esCantidadValida = function(cantidad,idComponenteError){
 esPrecioValido = function(precio,idComponenteError){
     let hayError = false;
     if(isNaN(precio)){
-        mostrarTexto(idComponenteError,"*Campo Obligatorio");
+        mostrarTexto(idComponenteError,"*CAMPO OBLIGATORIO");
         hayError = true;
     }
     if(precio < 0 || precio > 50){
-        mostrarTexto(idComponenteError,"Precio debe ser entre 0.01 y 50");
+        mostrarTexto(idComponenteError,"PRECIO DEBE SER ENTRE 0.01 Y 50");
         hayError = true;
     }
     if(hayError == false){
@@ -82,11 +82,13 @@ esPrecioValido = function(precio,idComponenteError){
 
 limpiar=function(){
     mostrarTextoEnCaja("txtProducto","");
-    mostrarTextoEnCaja("txtCantidad",0);
-    mostrarTextoEnCaja("txtPrecio",0.0);
+    mostrarTextoEnCaja("txtCantidad","");
+    mostrarTextoEnCaja("txtPrecio","");
     mostrarTexto("lblSubtotal",0.0);
     mostrarTexto("lblDescuento",0.0);
     mostrarTexto("lblValorIVA",0.0);
     mostrarTexto("lblTotal",0.0);
-    mostrarTexto("lblResumen","");
+    mostrarTexto("lblErrorProducto","");
+    mostrarTexto("lblErrorCantidad","");
+    mostrarTexto("lblErrorPrecio","")
 }

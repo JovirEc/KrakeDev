@@ -17,36 +17,51 @@
             <!-- DATOS -->
                 <div class="partDatos">
                     <b class="titulo">PUNTO DE VENTA</b>
-                    <div class="tituloCaja">PRODUCTO</div>
-                    <div>
-                        <input type="text" id="txtProducto"/>
-                        <div id="lblErrorProducto" class="error"></div>
+                    <div class="ingresoDatos">
+                        <div class="tituloCaja">PRODUCTO</div>
+                        <div class="contenidoCaja">
+                            <input type="text" id="txtProducto" class="inputDatos"/>
+                            <div id="lblErrorProducto" class="error"></div>
+                        </div>
                     </div>
-                    <div class="tituloCaja">CANTIDAD</div>
-                    <div>
-                        <input type="text" id="txtCantidad"/>
-                        <div id="lblErrorCantidad"></div>
+                    <div class="ingresoDatos">
+                        <div class="tituloCaja">CANTIDAD</div>
+                        <div class="contenidoCaja">
+                            <input type="text" id="txtCantidad" class="inputDatos"/>
+                            <div id="lblErrorCantidad" class="error"></div>
+                        </div>
                     </div>
-                    <div class="tituloCaja">PRECIO</div>
-                    <div>
-                        <input type="text" id="txtPrecio"/>
-                        <div id="lblErrorPrecio"></div>
-                       </div>
-                    <input type="button" value="CALCULAR TOTAL" onclick="calcularValorTotal();"/>
-                    <input type="button" value="LIMPIAR" onclick="limpiar();"/>
+                    <div class="ingresoDatos">
+                        <div class="tituloCaja">PRECIO</div>
+                        <div class="contenidoCaja">
+                            <input type="text" id="txtPrecio" class="inputDatos"/>
+                            <div id="lblErrorPrecio" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <input type="button" value="CALCULAR TOTAL" onclick="calcularValorTotal();" class="boton"/>
+                        <input type="button" value="LIMPIAR" onclick="limpiar();" class="boton"/>
+                    </div>
                 </div>
             <!-- RESULTADOS -->
                 <div class="partResultado">
-                    <div id="lblErrorPrecio"></div>
-                    <div>Subtotal</div>
-                    <div id="lblSubtotal">0.0</div>
-                    <div>Descuento</div>
-                    <div id="lblDescuento">0.0</div>
-                    <div>IVA 12%</div>
-                    <div id="lblValorIVA">0.0</div>
-                    <div>Total</div>
-                    <div id="lblTotal">0.0</div>
-                    
+                    <b class="titulo">RESUMEN</b>
+                    <div class="datosMostrados">
+                        <div class="tituloResultado">SUBTOTAL</div>
+                        <div id="lblSubtotal" class="numeroResultado">0.0</div>
+                    </div>
+                    <div class="datosMostrados">
+                        <div class="tituloResultado">DESCUENTO</div>
+                        <div id="lblDescuento" class="numeroResultado">0.0</div>
+                    </div>
+                    <div class="datosMostrados">
+                        <div class="tituloResultado">IVA 12%</div>
+                        <div id="lblValorIVA" class="numeroResultado">0.0</div>
+                    </div>
+                    <div class="datosMostrados">
+                        <div class="tituloResultado">TOTAL</div>
+                        <div id="lblTotal" class="numeroResultado">0.0</div>
+                    </div>
                 </div>
             </div>
             <!--<div class="divResumen">
