@@ -50,3 +50,55 @@ validarEstructura = function(placa){
         return null;
     }
 }
+obtenerProvincia = function(placa){
+    let cmpPlaca = placa.charAt(0);
+    if (cmpPlaca == "A"){
+        return "AZUAY";
+    }else if(cmpPlaca == "B"){
+        return "BOLIVAR";
+    }else if(cmpPlaca == "C"){
+        return "CARCHI";
+    }else if(cmpPlaca == "E"){
+        return "ESMERALDA";
+    }else if(cmpPlaca == "G"){
+        return "GUAYAS";
+    }else if(cmpPlaca == "H"){
+        return "CHIMBORAZO";
+    }else if(cmpPlaca == "I"){
+        return "IMBABURA";
+    }else if(cmpPlaca == "K"){
+        return "SUCUMBIOS";
+    }else if(cmpPlaca == "L"){
+        return "LOJA";
+    }else if(cmpPlaca == "M"){
+        return "MANABI";
+    }else if(cmpPlaca == "N"){
+        return "NAPO";
+    }else if(cmpPlaca == "O"){
+        return "EL ORO";
+    }else if(cmpPlaca == "P"){
+        return "PICHINCHA";
+    }else if(cmpPlaca == "Q"){
+        return "ORELLANA";
+    }else if(cmpPlaca == "R"){
+        return "LOS RIOS";
+    }else if(cmpPlaca == "S"){
+        return "PASTAZA";
+    }else if(cmpPlaca == "T"){
+        return "TUNGURAHUA";
+    }else if(cmpPlaca == "U"){
+        return "CAÑAR";
+    }else if(cmpPlaca == "V"){
+        return "MORONA SANTIAGO";
+    }else if(cmpPlaca == "W"){
+        return "GALAPAGOS";
+    }else if(cmpPlaca == "X"){
+        return "COTOPAXI";
+    }else if(cmpPlaca == "Y"){
+        return "SANTA ELENA";
+    }else if(cmpPlaca == "Z"){
+        return "ZAMORA CHINCHIPE";
+    }else{
+        return null;
+    }
+}
