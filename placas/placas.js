@@ -2,6 +2,8 @@ validarPlaca = function(){
     let placa = recuperarTexto("lblPlaca");
     let hayError = validarEstructura(placa);
     let cmpProvincia;
+    let cmpTipoVehiculo;
+    
     if(hayError == null){
         mostrarImagen("lblImgPlaca","./img/placaValida.png");
         mostrarTexto("lblErrores","");
@@ -11,6 +13,8 @@ validarPlaca = function(){
         }else{
             mostrarTexto("lblProvincia","*Provincia incorrecta*")
         }
+        cmpTipoVehiculo = obtenerTipoVehiculo(placa);
+        mostrarTexto("lblTipoVehiculo",cmpTipoVehiculo);
     }else{
         mostrarImagen("lblImgPlaca","./img/placaInvalida.png");
         mostrarTexto("lblErrores",hayError);

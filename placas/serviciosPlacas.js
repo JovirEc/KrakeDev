@@ -102,3 +102,19 @@ obtenerProvincia = function(placa){
         return null;
     }
 }
+obtenerTipoVehiculo = function(placa){
+    let cmpPlaca = placa.charAt(1);
+    if (cmpPlaca == "A" || cmpPlaca == "Z"){
+        return "Comercial";
+    }else if(cmpPlaca == "E"){
+        return "Gubernamental";
+    }else if(cmpPlaca == "M"){
+        return "Municipal";
+    }else if(cmpPlaca == "S"){
+        return "Gobierno Provincial";
+    }else if(cmpPlaca == "X"){
+        return "Uso Oficial";
+    }else{
+        return "Particular";
+    }
+}
