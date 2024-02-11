@@ -114,7 +114,27 @@ obtenerTipoVehiculo = function(placa){
         return "Gobierno Provincial";
     }else if(cmpPlaca == "X"){
         return "Uso Oficial";
-    }else{
+    }else if(cmpPlaca.charCodeAt(0) >= 65 && cmpPlaca.charCodeAt(0) <=90){
         return "Particular";
+    }else{
+        return null;
+    }
+}
+obtenerDiaPicoYPlaca = function(placa){
+    let longitud = placa.length;
+    let recuperar = placa.charAt(longitud-1)
+    let cmpPlaca = parseInt(recuperar);
+    if(cmpPlaca == 1 || cmpPlaca == 2){
+        return "Lunes";
+    }else if(cmpPlaca == 3 || cmpPlaca == 4){
+        return "Martes";
+    }else if(cmpPlaca == 5 || cmpPlaca == 6){
+        return "Miercoles";
+    }else if(cmpPlaca == 7 || cmpPlaca == 8){
+        return "Jueves";
+    }else if(cmpPlaca == 9 || cmpPlaca == 0){
+        return "Viernes";
+    }else if(isNaN(cmpPlaca)){
+        return null;
     }
 }
