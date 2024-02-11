@@ -53,51 +53,51 @@ validarEstructura = function(placa){
 obtenerProvincia = function(placa){
     let cmpPlaca = placa.charAt(0);
     if (cmpPlaca == "A"){
-        return "AZUAY";
+        return "Azuay";
     }else if(cmpPlaca == "B"){
-        return "BOLIVAR";
+        return "Bolivar";
     }else if(cmpPlaca == "C"){
-        return "CARCHI";
+        return "Carchi";
     }else if(cmpPlaca == "E"){
-        return "ESMERALDA";
+        return "Esmeralda";
     }else if(cmpPlaca == "G"){
-        return "GUAYAS";
+        return "Guayas";
     }else if(cmpPlaca == "H"){
-        return "CHIMBORAZO";
+        return "Chimborazo";
     }else if(cmpPlaca == "I"){
-        return "IMBABURA";
+        return "Imbabura";
     }else if(cmpPlaca == "K"){
-        return "SUCUMBIOS";
+        return "Sucumbios";
     }else if(cmpPlaca == "L"){
-        return "LOJA";
+        return "Loja";
     }else if(cmpPlaca == "M"){
-        return "MANABI";
+        return "Manabi";
     }else if(cmpPlaca == "N"){
-        return "NAPO";
+        return "Napo";
     }else if(cmpPlaca == "O"){
-        return "EL ORO";
+        return "El Oro";
     }else if(cmpPlaca == "P"){
-        return "PICHINCHA";
+        return "Pichincha";
     }else if(cmpPlaca == "Q"){
-        return "ORELLANA";
+        return "Orellana";
     }else if(cmpPlaca == "R"){
-        return "LOS RIOS";
+        return "Los Rios";
     }else if(cmpPlaca == "S"){
-        return "PASTAZA";
+        return "Pastaza";
     }else if(cmpPlaca == "T"){
-        return "TUNGURAHUA";
+        return "Tunguragua";
     }else if(cmpPlaca == "U"){
-        return "CAÑAR";
+        return "Cañar";
     }else if(cmpPlaca == "V"){
-        return "MORONA SANTIAGO";
+        return "Morona Santiago";
     }else if(cmpPlaca == "W"){
-        return "GALAPAGOS";
+        return "Galapagos";
     }else if(cmpPlaca == "X"){
-        return "COTOPAXI";
+        return "Cotopaxi";
     }else if(cmpPlaca == "Y"){
-        return "SANTA ELENA";
+        return "Santa Elena";
     }else if(cmpPlaca == "Z"){
-        return "ZAMORA CHINCHIPE";
+        return "Zamora Chinchipe";
     }else{
         return null;
     }

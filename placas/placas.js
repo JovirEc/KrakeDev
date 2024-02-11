@@ -9,7 +9,7 @@ validarPlaca = function(){
         if(cmpProvincia != null){
             mostrarTexto("lblProvincia",cmpProvincia);
         }else{
-            mostrarTexto("lblProvincia","*PROVINCIA INCORRECTA*")
+            mostrarTexto("lblProvincia","*Provincia incorrecta*")
         }
     }else{
         mostrarImagen("lblImgPlaca","./img/placaInvalida.png");
