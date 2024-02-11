@@ -49,3 +49,11 @@ validarPlaca = function(){
         }    
     }
 }
+limpiar = function(){
+    mostrarTextoEnCaja("lblPlaca","");
+    mostrarImagen("lblImgPlaca","./img/placaUndefined.png");
+    mostrarTexto("lblErrores","");
+    mostrarTexto("lblProvincia","N/A");
+    mostrarTexto("lblTipoVehiculo","N/A");
+    mostrarTexto("lblPicoYPlaca","N/A");
+}
