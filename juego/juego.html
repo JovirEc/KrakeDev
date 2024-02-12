@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="juego.js"></script>
+        <script src="serviciosJuego.js"></script>
+        <script src="utilitarios.js"></script>
+        <link rel="stylesheet" href="juego.css">
+    </head>
+    <body>
+        <div class="baseFondo">
+            <div class="contenedorPrincipal">
+                <div class="titulo">JUEGA PIEDRA PAPEL O TIJERA</div>
+                <div class="resultado" id="lblResultado1"></div>
+                <div class="imagenesJugadores">
+                    <div class="imagenResultado">
+                        <img src="./imagenes/sinElegir.png" class="imgJugador1" id="lblImgJugador"/>
+                    </div>
+                    <div class="imagenResultado">
+                        <img src="./imagenes/sinElegir.png" class="imgJugador2" id="lblImgPc"/>
+                    </div>
+                </div>
+                <div class="botonYPuntuacion">
+                    <div class="puntuacionBox">
+                        <!--<div class="tituloPuntaje">JUGADOR</div>
+                        <div class="valorPuntaje">1</div>-->
+                    </div>
+                    <div class="botonera">
+                        <div class="botonBox">
+                            <img src="./imagenes/botonPiedra.png" class="imgBotonPiedra" onclick="jugar('Piedra')"/>
+                        </div>
+                        <div class="botonBox">
+                            <img src="./imagenes/botonPapel.png" class="imgBoton" onclick="jugar('Papel')" />
+                        </div>
+                        <div class="botonBox">
+                            <img src="./imagenes/botonTijera.png" class="imgBoton" onclick="jugar('Tijera')" />
+                        </div>
+                    </div>
+                    <div class="puntuacionBox"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

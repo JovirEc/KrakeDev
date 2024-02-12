@@ -1,0 +1,81 @@
+body{
+    background-color: blueviolet;
+}
+.baseFondo{
+    background-color: aquamarine;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.contenedorPrincipal{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.resultado{
+    background-color: rgb(195, 17, 17);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+
+}
+.imagenesJugadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imagenResultado{
+    padding: 30px;
+}
+.imgJugador1{
+    width: 400px;
+}
+.imgJugador2{
+    width: 400px;
+    transform: scaleX(-1);
+}
+.botonYPuntuacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.puntuacionBox{
+    display: flex;
+    flex-direction: row;
+}
+.tituloPuntaje{
+    background-color: aqua;
+}
+.valorPuntaje{
+    background-color: cadetblue;
+}
+.botonera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.botonBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.imgBotonPiedra{
+    height: 90px;
+}
+.imgBoton{
+    height: 100px;
+}
