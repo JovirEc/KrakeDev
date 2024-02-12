@@ -97,3 +97,16 @@ body{
 .imgBoton{
     height: 100px;
 }
+.cajaBtnLimpiar{
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+}
+.btnLimpiar{
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(20, 47, 75);
+    color: white;
+}
