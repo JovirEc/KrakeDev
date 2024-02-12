@@ -44,6 +44,7 @@ body{
     transform: scaleX(-1);
 }
 .botonYPuntuacion{
+    background-color: chartreuse;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,14 +53,31 @@ body{
     padding-bottom: 20px;
 }
 .puntuacionBox{
+    background-color: chocolate;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .tituloPuntaje{
     background-color: aqua;
+    font-size: 20px;
+    font-weight: 800;
+    height: 90px;
+    width: 200px;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
 }
 .valorPuntaje{
     background-color: cadetblue;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+    font-weight: bold;
+
 }
 .botonera{
     display: flex;
