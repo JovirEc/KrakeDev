@@ -30,3 +30,13 @@ jugar = function(seleccionado){
         mostrarTexto("lblResultado1","¡¡ HAS PERDIDO EL JUEGO !!");
     }
 }
+
+limpiar = function(){
+    mostrarTexto("lblResultado1","");
+    mostrarImagen("lblImgPc","./imagenes/sinElegir.png");
+    mostrarImagen("lblImgJugador","./imagenes/sinElegir.png");
+    mostrarTexto("puntajeJugador","0");
+    mostrarTexto("puntajeComputador","0");
+    puntosUsuario = 0;
+    puntosComputador = 0;
+}

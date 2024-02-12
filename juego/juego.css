@@ -1,31 +1,40 @@
 body{
-    background-color: blueviolet;
+    background-image: url(./imagenes/fondo.jpg);
 }
 .baseFondo{
-    background-color: aquamarine;
     padding: 10px;
     display: flex;
     justify-content: center;
 }
 .contenedorPrincipal{
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding-bottom: 20px;
+
 }
 .titulo{
-    font-weight: bold;
-    font-size: 20px;
+    color: coral;
+    font-weight:800;
+    font-size: 25px;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
 .resultado{
-    background-color: rgb(195, 17, 17);
+    background-color: rgb(225, 225, 225);
+    color: rgb(42, 42, 42);
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 40px;
     font-weight: 900;
     text-align: center;
+    width: 850px;
+    border-radius: 10px;
 
 }
 .imagenesJugadores{
@@ -44,7 +53,6 @@ body{
     transform: scaleX(-1);
 }
 .botonYPuntuacion{
-    background-color: chartreuse;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,13 +61,12 @@ body{
     padding-bottom: 20px;
 }
 .puntuacionBox{
-    background-color: chocolate;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.tituloPuntaje{
-    background-color: aqua;
+.tituloPuntajePj{
+    background-color: rgb(240, 240, 240);
     font-size: 20px;
     font-weight: 800;
     height: 90px;
@@ -67,9 +74,12 @@ body{
     line-height: 90px;
     text-align: center;
     vertical-align: middle;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
-.valorPuntaje{
-    background-color: cadetblue;
+.valorPuntajePj{
+    background-color: coral;
     width: 90px;
     height: 90px;
     line-height: 90px;
@@ -77,7 +87,34 @@ body{
     vertical-align: middle;
     font-size: 60px;
     font-weight: bold;
-
+    color: rgb(24, 24, 24);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.tituloPuntajePc{
+    background-color: rgb(240, 240, 240);
+    font-size: 20px;
+    font-weight: 800;
+    height: 90px;
+    width: 200px;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.valorPuntajePc{
+    background-color: coral;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(24, 24, 24);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .botonera{
     display: flex;
@@ -98,9 +135,9 @@ body{
     height: 100px;
 }
 .cajaBtnLimpiar{
-    background-color: cornflowerblue;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 .btnLimpiar{
     width: 160px;
@@ -109,4 +146,6 @@ body{
     border: 0;
     background-color: rgb(20, 47, 75);
     color: white;
+    font-size: 13px;
+    font-weight: 800;
 }
