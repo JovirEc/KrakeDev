@@ -30,7 +30,6 @@ guardarPalabra = function (){
         alert("*DEBE INGRESAR UNA PLABRA DE 5 LETRAS MAYÚSCULAS*");
     }else{
         palabraSecreta = palabra;
-        console.log(palabraSecreta);
     }
 }
 
@@ -39,3 +38,13 @@ mostrarLetra = function(letra,posicion){
     mostrarTexto(divPosicion,letra);
 }
 
+validar = function(letra){
+    let = letrasEncontradas;
+
+    for(let i = 0; i <= 4; i++){
+        if(letra.charCodeAt(0) == palabraSecreta.charCodeAt(i)){
+            mostrarLetra(letra,i);
+            letrasEncontradas++
+        }
+    }
+}
