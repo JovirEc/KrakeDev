@@ -1,5 +1,5 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
-let palabraSecreta;
+let palabraSecreta = "";
 
 
 esMayuscula = function(caracter){
@@ -39,12 +39,21 @@ mostrarLetra = function(letra,posicion){
 }
 
 validar = function(letra){
-    let = letrasEncontradas;
+    let letrasEncontradas;
 
     for(let i = 0; i <= 4; i++){
         if(letra.charCodeAt(0) == palabraSecreta.charCodeAt(i)){
             mostrarLetra(letra,i);
             letrasEncontradas++
         }
+    }
+}
+
+ingresarLetra = function(){
+    letra = recuperarTexto("txtLetra")
+    if (letra.charCodeAt(0) >= 65 && letra.charCodeAt(0) <= 90){
+        validar(letra);
+    }else{
+        alert("SOLO SE ACEPTAN MAYÚSCULAS");
     }
 }
