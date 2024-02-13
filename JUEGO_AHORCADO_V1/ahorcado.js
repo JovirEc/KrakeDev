@@ -1,7 +1,7 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 let palabraSecreta = "";
-let intentos;
-let coincidencias;
+let intentos = 0;
+let coincidencias = 0;
 let errores = 0;
 
 
@@ -50,10 +50,11 @@ validar = function(letra){
             coincidencias++;
         }
     }
-    if(letrasEncontradas == false){
+    if(letrasEncontradas == false ){
         alert("LA LETRA NO ES PARTE DE LA PALABRA");
         errores++;
-        mostrarAhorcado();
+        mostrarImagen("ahorcadoImagen","./Ahorcado_0"+errores+".png");
+        //mostrarAhorcado();
     }
 
 }
@@ -61,18 +62,21 @@ validar = function(letra){
 ingresarLetra = function(){
     letra = recuperarTexto("txtLetra")
     if (letra.charCodeAt(0) >= 65 && letra.charCodeAt(0) <= 90){
-        validar(letra);
         intentos++;
-        if(coincidencias == 5){
-            alert("HA GANADO");
-        }else if(intentos == 10){
-            alert("HA PERDIDO");
-        }
+        validar(letra);
     }else{
         alert("SOLO SE ACEPTAN MAYÚSCULAS");
     }
+    mostrarAhorcado();
+    mostrarTextoEnCaja("txtLetra","")
+    document.getElementById("txtLetra").focus();
+
 }
 
 mostrarAhorcado = function(){
-    mostrarImagen("ahorcadoImagen","./Ahorcado_0"+errores+".png");
+    if(intentos < 15 && coincidencias >= 5){
+        mostrarImagen("ahorcadoImagen","./ganador.gif");
+    }else if(intentos < 15 && errores >= 9){
+        mostrarImagen("ahorcadoImagen","./gameOver.gif");
+    }
 }
