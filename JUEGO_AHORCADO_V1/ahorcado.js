@@ -16,7 +16,7 @@ guardarPalabra = function (){
     let hayError = false;
     let palabra = recuperarTexto("txtSecreta");
     let palabralength = palabra.length;
-    //Proceso verificar
+    //Validar condiciones
     if (palabralength != 5){
         hayError = true;
     }
@@ -25,12 +25,17 @@ guardarPalabra = function (){
             hayError = true;
         }
     }
-    //Validación
+    //Validación si hay error
     if (hayError == true){
         alert("*DEBE INGRESAR UNA PLABRA DE 5 LETRAS MAYÚSCULAS*");
     }else{
         palabraSecreta = palabra;
         console.log(palabraSecreta);
     }
-
 }
+
+mostrarLetra = function(letra,posicion){
+    let divPosicion = "div"+posicion;
+    mostrarTexto(divPosicion,letra);
+}
+
