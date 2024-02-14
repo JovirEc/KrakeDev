@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="ejercicios1.js"></script>
     <script src="utilitarios.js"></script>
 </head>
+
 <body>
     <div>
         <input type="text" id="txtNota">
@@ -15,5 +17,33 @@
         <input type="button" value="IMPRIMIR" onclick="recorrerArreglo()">
         <input type="button" value="CALCULAR PROMEDIO" onclick="ejecutarPromedio()">
     </div>
+    <table>
+        <tr>
+            <th>CABECERA 1</th>
+            <th>CABECERA 2</th>
+            <th>CABECERA 3</th>
+        </tr>
+        <tr>
+            <td>celda1</td>
+            <td>celda2</td>
+            <td>celda3</td>
+        </tr>
+        <tr>
+            <td>celda4</td>
+            <td>celda5</td>
+            <td>celda6</td>
+        </tr>
+        <tr>
+            <td>celda7</td>
+            <td>celda8</td>
+            <td>celda9</td>
+        </tr>
+    </table>
+    <input type="button" value="GENERAR TABLA" onclick="generarTabla()">
+    <input type="button" value="GENERAR NOTAS" onclick="mostrarNotas()">
+    <div id="divTabla">
+    </div>
+
 </body>
+
 </html>
