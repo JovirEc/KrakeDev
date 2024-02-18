@@ -31,13 +31,13 @@ mostrarOpcionResumen = function(){
 
 mostrarEmpleados = function(){
     let cmpTabla = document.getElementById("tablaEmpleados")
-    let var1 = empleados.length
+    let numEmpleados = empleados.length
     let contenidoTabla = "<table>"+
     "<tr><th class='tblTitulos'>CEDULA</th>"+
     "<th class='tblTitulos'>NOMBRE</th>"+
     "<th class='tblTitulos'>APELLIDO</th>"+
     "<th class='tblTitulos'>SUELDO</th></tr>"
-    for(let i = 0; i < var1; i++){
+    for(let i = 0; i < numEmpleados; i++){
         let datos = empleados[i]
         contenidoTabla += "<tr>"+
         "<td>"+datos.cedula+"</td>"+
@@ -58,3 +58,68 @@ ejecutarNuevo = function(){
     habilitarComponente("txtSueldo")
     habilitarComponente("btnGuardar")
 }
+
+buscarEmpleado = function(cedula){//1714616123
+    let encontrado = false
+    let personaSeleccionada = {}
+    for(let i=0; i<empleados.length; i++){
+        personaSeleccionada = empleados[i]
+        if(cedula == personaSeleccionada.cedula){
+            encontrado = true
+            break
+        }
+    }
+    if(encontrado == true){
+        return personaSeleccionada
+    }else{
+        return null
+    }
+}
+
+agregarEmpleado = function(empleado){
+    let cedulaEmpleado = empleado.cedula
+    let empleadoEncontrado = buscarEmpleado(cedulaEmpleado)
+    if (empleadoEncontrado == null){
+        empleados.push(empleado)
+        return true
+    }else{
+        return false
+    }
+}
+
+guardar = function(){ // Para Crear y Modificar empleado
+    let cmpCedula = recuperarTexto("txtCedula")
+    /*let cmpNombre = recuperarTexto("txtNombre")
+    let cmpApellido = recuperarTexto("txtApellido")
+    let cmpSueldo = recuperarFloat("txtSueldo")*/
+    let errorGeneral = false
+    let errorInterno = false
+    let msgError = ""
+    //VALIDACIÓN CEDULA
+    for(let i=0;i<cmpCedula.length;i++){
+        msgError = ""
+        if (cmpCedula.charCodeAt(i) < 48 || cmpCedula.charCodeAt(i) > 57){
+            errorInterno = true
+            msgError = "*Solo números "
+        }
+    }
+    if(cmpCedula.length != 10){
+        errorInterno = true
+        msgError += "*10 caracteres"
+    }
+    if(errorInterno == true){
+        mostrarTexto("lblErrorCedula",msgError)
+        errorGeneral = true
+        errorInterno = false
+    }
+    //VALIDACIÓN NOMBRE
+}
+
+/*habilitarComponente("txtCedula")  lblErrorCedula
+habilitarComponente("txtNombre")    lblErrorNombre
+habilitarComponente("txtApellido")  lblErrorApellido
+habilitarComponente("txtSueldo")    lblErrorSueldo
+habilitarComponente("btnGuardar")
+
+
+*/
