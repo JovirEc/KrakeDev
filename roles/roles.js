@@ -27,10 +27,10 @@ mostrarEmpleados = function(){
     let cmpTabla = document.getElementById("tablaEmpleados")
     let var1 = empleados.length
     let contenidoTabla = "<table>"+
-    "<tr><th>CEDULA</th>"+
-    "<th>NOMBRE</th>"+
-    "<th>APELLIDO</th>"+
-    "<th>SUELDO</th></tr>"
+    "<tr><th class='tblTitulos'>CEDULA</th>"+
+    "<th class='tblTitulos'>NOMBRE</th>"+
+    "<th class='tblTitulos'>APELLIDO</th>"+
+    "<th class='tblTitulos'>SUELDO</th></tr>"
     for(let i = 0; i < var1; i++){
         let datos = empleados[i]
         contenidoTabla += "<tr>"+
