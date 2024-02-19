@@ -89,37 +89,116 @@ agregarEmpleado = function(empleado){
 
 guardar = function(){ // Para Crear y Modificar empleado
     let cmpCedula = recuperarTexto("txtCedula")
-    /*let cmpNombre = recuperarTexto("txtNombre")
+    let cmpNombre = recuperarTexto("txtNombre")
     let cmpApellido = recuperarTexto("txtApellido")
-    let cmpSueldo = recuperarFloat("txtSueldo")*/
-    let errorGeneral = false
-    let errorInterno = false
+    let cmpSueldoFloat = recuperarFloat("txtSueldo")
+    let cmpSueldo = recuperarTexto("txtSueldo")
+    let hayError = false
     let msgError = ""
+
     //VALIDACIÓN CEDULA
-    for(let i=0;i<cmpCedula.length;i++){
-        msgError = ""
-        if (cmpCedula.charCodeAt(i) < 48 || cmpCedula.charCodeAt(i) > 57){
-            errorInterno = true
-            msgError = "*Solo números "
+    if(cmpCedula.length != 10){
+        hayError = true
+        msgError = "*Debe tener 10 caracteres"
+        mostrarTexto("lblErrorCedula",msgError)
+    }else{
+        for(let i=0;i<cmpCedula.length;i++){
+            if (cmpCedula.charCodeAt(i) < 48 || cmpCedula.charCodeAt(i) > 57){
+                hayError = true
+                msgError = "*Solo se aceptan numeros"
+                mostrarTexto("lblErrorCedula",msgError)
+                break
+            }
+            else{
+                mostrarTexto("lblErrorCedula","")
+            }
         }
     }
-    if(cmpCedula.length != 10){
-        errorInterno = true
-        msgError += "*10 caracteres"
-    }
-    if(errorInterno == true){
-        mostrarTexto("lblErrorCedula",msgError)
-        errorGeneral = true
-        errorInterno = false
-    }
     //VALIDACIÓN NOMBRE
+    if(cmpNombre.length < 3){
+        hayError = true
+        msgError = "*Debe tener minimo 3 caracteres"
+        mostrarTexto("lblErrorNombre",msgError)
+    }else{
+        for(let i=0;i<cmpNombre.length;i++){
+            if (cmpNombre.charCodeAt(i) < 65 || cmpNombre.charCodeAt(i) > 90){
+                hayError = true
+                msgError = "*Solo letras mayusculas"
+                mostrarTexto("lblErrorNombre",msgError)
+                break
+            }
+            else{
+                mostrarTexto("lblErrorNombre","")
+            }
+        }
+    }
+
+    //VALIDACION APELLIDO
+    if(cmpApellido.length < 3){
+        hayError = true
+        msgError = "*Debe tener minimo 3 caracteres"
+        mostrarTexto("lblErrorApellido",msgError)
+    }else{
+        for(let i=0;i<cmpApellido.length;i++){
+            if (cmpApellido.charCodeAt(i) < 65 || cmpApellido.charCodeAt(i) > 90){
+                hayError = true
+                msgError = "*Solo letras mayusculas"
+                mostrarTexto("lblErrorApellido",msgError)
+                break
+            }
+            else{
+                mostrarTexto("lblErrorApellido","")
+            }
+        }
+    }
+    //VALIDACION SUELDO
+    if(cmpSueldo.length <= 0){
+        hayError = true
+        msgError = "*Ingrese una cantidad"
+        mostrarTexto("lblErrorSueldo",msgError)
+    }else{
+        for(let i=0;i<cmpSueldo.length;i++){
+            if (cmpSueldo.charCodeAt(i) < 48 || cmpSueldo.charCodeAt(i) > 57){
+                hayError = true
+                msgError = "*Solo se aceptan numeros"
+                mostrarTexto("lblErrorSueldo",msgError)
+                break
+            }
+            else{
+                if(cmpSueldoFloat < 400 || cmpSueldoFloat >5000){
+                    hayError = true;
+                    msgError = "*Monto debe ser entre $400 y $5000"
+                    mostrarTexto("lblErrorSueldo",msgError)
+                }else{
+                    mostrarTexto("lblErrorSueldo","")
+                }
+            }
+        }
+    }
+
+    //AQUI INGRESAR LA CONDICION DE HAY ERROR PARA QUE REALICE EL RESTO
+    if(hayError == false){
+        if(esNuevo == true){
+            let empleadoAgregado
+            let empleado = {
+                cedula: cmpCedula,
+                nombre: cmpNombre,
+                apellido: cmpApellido,
+                sueldo: cmpSueldoFloat
+            }
+            empleadoAgregado = agregarEmpleado(empleado)
+            if(empleadoAgregado == true){
+                mostrarEmpleados()
+                alert("EMPLEADO GUARDADO CORRECTAMENTE")
+            }else{
+                alert("YA EXISTE UN EMPLEADO CON LA CEDULA "+cmpCedula)
+            }
+        }
+    }
 }
 
 /*habilitarComponente("txtCedula")  lblErrorCedula
 habilitarComponente("txtNombre")    lblErrorNombre
 habilitarComponente("txtApellido")  lblErrorApellido
 habilitarComponente("txtSueldo")    lblErrorSueldo
-habilitarComponente("btnGuardar")
-
-
-*/
+habilitarComponente("btnGuardar")*/
