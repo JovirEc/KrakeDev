@@ -10,11 +10,7 @@ mostrarOpcionEmpleado = function(){
     ocultarComponente("divRol")
     ocultarComponente("divResumen")
     mostrarEmpleados()
-    deshabilitarComponente("txtCedula")
-    deshabilitarComponente("txtNombre")
-    deshabilitarComponente("txtApellido")
-    deshabilitarComponente("txtSueldo")
-    deshabilitarComponente("btnGuardar")
+    deshabilitarDatosEmpleados()
 }
 
 mostrarOpcionRol = function(){
@@ -190,11 +186,25 @@ guardar = function(){ // Para Crear y Modificar empleado
             if(empleadoAgregado == true){
                 mostrarEmpleados()
                 alert("EMPLEADO GUARDADO CORRECTAMENTE")
+                deshabilitarDatosEmpleados()
+
             }else{
                 alert("YA EXISTE UN EMPLEADO CON LA CEDULA "+cmpCedula)
             }
         }
     }
+}
+
+deshabilitarDatosEmpleados = function(){
+    mostrarTextoEnCaja("txtCedula","")
+    mostrarTextoEnCaja("txtNombre","")
+    mostrarTextoEnCaja("txtApellido","")
+    mostrarTextoEnCaja("txtSueldo","")
+    deshabilitarComponente("txtCedula")
+    deshabilitarComponente("txtNombre")
+    deshabilitarComponente("txtApellido")
+    deshabilitarComponente("txtSueldo")
+    deshabilitarComponente("btnGuardar")
 }
 
 /*habilitarComponente("txtCedula")  lblErrorCedula
