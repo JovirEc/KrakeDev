@@ -1,8 +1,8 @@
 let esNuevo = false
 let empleados = [
-    {cedula:"1714616123",nombre:"John",apellido:"Cena",sueldo:500.0},
-    {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
-    {cedula:"0931657005",nombre:"Javier",apellido:"Peterburgos",sueldo:750.0}
+    {cedula:"1714616123",nombre:"JOHN",apellido:"CENA",sueldo:500.0},
+    {cedula:"0914632123",nombre:"LUISA",apellido:"GONZALEZ",sueldo:900.0},
+    {cedula:"0931657005",nombre:"JAVIER",apellido:"PETERBURGOS",sueldo:750.0}
 ]
 
 mostrarOpcionEmpleado = function(){
@@ -174,6 +174,7 @@ guardar = function(){ // Para Crear y Modificar empleado
 
     //AQUI INGRESAR LA CONDICION DE HAY ERROR PARA QUE REALICE EL RESTO
     if(hayError == false){
+        let empleadoSeleccionado
         if(esNuevo == true){
             let empleadoAgregado
             let empleado = {
@@ -187,11 +188,27 @@ guardar = function(){ // Para Crear y Modificar empleado
                 mostrarEmpleados()
                 alert("EMPLEADO GUARDADO CORRECTAMENTE")
                 deshabilitarDatosEmpleados()
+                esNuevo = false
+            }//else{
+                
+                /*empleadoSeleccionado = buscarEmpleado(empleado.cedula)
+                empleadoSeleccionado.nombre = cmpNombre
+                empleadoSeleccionado.apellido = cmpApellido
+                empleadoSeleccionado.sueldo = cmpSueldoFloat
+                alert("EMPLEADO MODIFICADO EXITOSAMENTE "+cmpCedula)
+                mostrarEmpleados()*/
 
-            }else{
-                alert("YA EXISTE UN EMPLEADO CON LA CEDULA "+cmpCedula)
-            }
+            //}
+        }else{
+            empleadoSeleccionado = buscarEmpleado(cmpCedula)
+            empleadoSeleccionado.nombre = cmpNombre
+            empleadoSeleccionado.apellido = cmpApellido
+            empleadoSeleccionado.sueldo = cmpSueldoFloat
+            alert("EMPLEADO MODIFICADO EXITOSAMENTE")
+            mostrarEmpleados()
+            deshabilitarDatosEmpleados()
         }
+
     }
 }
 
@@ -207,8 +224,21 @@ deshabilitarDatosEmpleados = function(){
     deshabilitarComponente("btnGuardar")
 }
 
-/*habilitarComponente("txtCedula")  lblErrorCedula
-habilitarComponente("txtNombre")    lblErrorNombre
-habilitarComponente("txtApellido")  lblErrorApellido
-habilitarComponente("txtSueldo")    lblErrorSueldo
-habilitarComponente("btnGuardar")*/
+ejecutarBusqueda = function(){
+    let var1 = recuperarTexto("txtBusquedaCedula")
+    let var2 = buscarEmpleado(var1)
+    if (var2 != null){
+        mostrarTextoEnCaja("txtCedula",var2.cedula)
+        mostrarTextoEnCaja("txtNombre",var2.nombre)
+        mostrarTextoEnCaja("txtApellido",var2.apellido)
+        mostrarTextoEnCaja("txtSueldo",var2.sueldo)
+        deshabilitarComponente("txtCedula")
+        habilitarComponente("txtNombre")
+        habilitarComponente("txtApellido")
+        habilitarComponente("txtSueldo")
+        habilitarComponente("btnGuardar")
+    }else{
+        alert("EMPLEADO NO EXISTE")
+        deshabilitarDatosEmpleados()
+    }
+}
