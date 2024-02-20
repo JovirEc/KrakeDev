@@ -20,6 +20,7 @@ mostrarOpcionRol = function(){
     ocultarComponente("divEmpleado")
     ocultarComponente("divResumen")
     deshabilitarComponente("btnGuardarRol")
+    mostrarRoles()
 }
 
 mostrarOpcionResumen = function(){
@@ -341,5 +342,41 @@ guardarRol = function(){
     agregarRol(objetoRol)
 }
 
+mostrarRoles = function(){
+    let tabla
+    let rol
+    tabla = "<table><tr>"+
+    "<th>CEDULA</th>"+
+    "<th>NOMBRE</th>"+
+    "<th>VALOR A PAGAR</th>"+
+    "<th>APORTE EMPLEADO</th>"+
+    "<th>APORTE EMPLEADOR</th>"+
+    "</tr>"
+    for(let i = 0; i < roles.length; i++){
+        rol = roles[i]
+        tabla +=  "<tr>"+
+        "<td>"+rol.cedula+"</td>"+
+        "<td>"+rol.nombre+"</td>"+
+        "<td>"+rol.valorAPagar+"</td>"+
+        "<td>"+rol.aporteEmpleado+"</td>"+
+        "<td>"+rol.aporteEmpleador+"</td>"+
+        "</tr>"
+    }
+    tabla += "</table>"
+    mostrarTabla("tablaResumen",tabla)
+}
+
+mostrarTotales = function(){
+    let totalEmpleado
+    let totalEmpleador
+    let totalAPagar
+    for(let i = 0; i < roles.length; i++){
+        rol = roles[i]
+        totalEmpleado += rol.aporteEmpleado
+        totalEmpleador += rol.aporteEmpleador
+        totalAPagar += rol.valorAPagar
+
+    }
+}
 // agregarRol y agregarEmpleado - Son iguales
 // buscarRol y BuscarEmpleado - Son iguales
