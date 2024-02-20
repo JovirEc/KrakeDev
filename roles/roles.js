@@ -251,7 +251,7 @@ limpiar = function(){
 
 buscarPorRol = function(){
     let cedulaRol = recuperarTexto("txtBusquedaCedulaRol")
-    cedulaExiste = buscarEmpleado(cedulaRol)
+    let cedulaExiste = buscarEmpleado(cedulaRol)
     if(cedulaExiste != null){
         mostrarTexto("infoCedula",cedulaExiste.cedula)
         mostrarTexto("infoNombre",cedulaExiste.nombre+" "+cedulaExiste.apellido)
@@ -261,6 +261,39 @@ buscarPorRol = function(){
         mostrarTexto("infoNombre","")
         mostrarTexto("infoSueldo","")
         alert("EL EMPLEADO NO EXISTE")
+    }   
+}
+
+calcularAporteEmpleado = function(sueldo){
+    let aporte = (sueldo*9.45)/100
+    return aporte;
+}
+
+calcularValorAPagar = function(sueldo,aporte,descuento){
+    let valorPagar = sueldo - aporte - descuento
+    return valorPagar
+}
+
+calcularRol = function(){
+    let sueldo = recuperarFloatDiv("infoSueldo")
+    let descuento = recuperarFloat("txtDescuentos")
+    let aporteEmpleado
+    let msgError = ""
+    let totalPagar
+
+    if(isNaN(descuento)){
+        msgError = "*Ingrese cantidad en numeros"
+        mostrarTexto("lblErrorDescuentos",msgError)
+    }else{
+        if(descuento < 1 || descuento > sueldo){
+            msgError = "*Cantidad debe ser entre 0 y "+sueldo
+            mostrarTexto("lblErrorDescuentos",msgError)
+        }else{
+            mostrarTexto("lblErrorDescuentos","")
+            aporteEmpleado = calcularAporteEmpleado(sueldo)
+            mostrarTexto("infoIESS",aporteEmpleado)
+            totalPagar = calcularValorAPagar(sueldo,aporteEmpleado,descuento)
+            mostrarTexto("infoPago",totalPagar)
+        }
     }
-    
 }
