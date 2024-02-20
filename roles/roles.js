@@ -248,3 +248,19 @@ limpiar = function(){
     deshabilitarDatosEmpleados()
     mostrarTextoEnCaja("txtBusquedaCedula","")
 }
+
+buscarPorRol = function(){
+    let cedulaRol = recuperarTexto("txtBusquedaCedulaRol")
+    cedulaExiste = buscarEmpleado(cedulaRol)
+    if(cedulaExiste != null){
+        mostrarTexto("infoCedula",cedulaExiste.cedula)
+        mostrarTexto("infoNombre",cedulaExiste.nombre+" "+cedulaExiste.apellido)
+        mostrarTexto("infoSueldo",cedulaExiste.sueldo)
+    }else{
+        mostrarTexto("infoCedula","")
+        mostrarTexto("infoNombre","")
+        mostrarTexto("infoSueldo","")
+        alert("EL EMPLEADO NO EXISTE")
+    }
+    
+}
