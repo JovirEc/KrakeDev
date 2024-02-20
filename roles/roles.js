@@ -242,3 +242,9 @@ ejecutarBusqueda = function(){
         deshabilitarDatosEmpleados()
     }
 }
+
+limpiar = function(){
+    esNuevo = false
+    deshabilitarDatosEmpleados()
+    mostrarTextoEnCaja("txtBusquedaCedula","")
+}
