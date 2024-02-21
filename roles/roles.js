@@ -5,7 +5,10 @@ let empleados = [
     {cedula:"0931657005",nombre:"JAVIER",apellido:"PETERBURGOS",sueldo:750.0}
 ]
 
-let roles = []
+let roles = [{cedula: "1234567834",nombre: "Joel Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0},
+{cedula: "1234526834",nombre: "Joell Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0},
+{cedula: "1474526834",nombre: "Joelll Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0}
+]
 
 mostrarOpcionEmpleado = function(){
     mostrarComponente("divEmpleado")
@@ -346,37 +349,41 @@ mostrarRoles = function(){
     let tabla
     let rol
     tabla = "<table><tr>"+
-    "<th>CEDULA</th>"+
-    "<th>NOMBRE</th>"+
-    "<th>VALOR A PAGAR</th>"+
-    "<th>APORTE EMPLEADO</th>"+
-    "<th>APORTE EMPLEADOR</th>"+
+    "<th class='tblTitulos2'>CEDULA</th>"+
+    "<th class='tblTitulos2'>NOMBRE</th>"+
+    "<th class='tblTitulos2'>VALOR A PAGAR</th>"+
+    "<th class='tblTitulos2'>APORTE EMPLEADO</th>"+
+    "<th class='tblTitulos2'>APORTE EMPLEADOR</th>"+
     "</tr>"
     for(let i = 0; i < roles.length; i++){
         rol = roles[i]
         tabla +=  "<tr>"+
-        "<td>"+rol.cedula+"</td>"+
-        "<td>"+rol.nombre+"</td>"+
-        "<td>"+rol.valorAPagar+"</td>"+
-        "<td>"+rol.aporteEmpleado+"</td>"+
-        "<td>"+rol.aporteEmpleador+"</td>"+
+        "<td class='tblCeldas'>"+rol.cedula+"</td>"+
+        "<td class='tblCeldas'>"+rol.nombre+"</td>"+
+        "<td class='tblCeldas'>"+rol.valorAPagar+"</td>"+
+        "<td class='tblCeldas'>"+rol.aporteEmpleado+"</td>"+
+        "<td class='tblCeldas'>"+rol.aporteEmpleador+"</td>"+
         "</tr>"
     }
     tabla += "</table>"
     mostrarTabla("tablaResumen",tabla)
+    mostrarTotales()
 }
 
+
 mostrarTotales = function(){
-    let totalEmpleado
-    let totalEmpleador
-    let totalAPagar
+    let totalEmpleado = 0.0
+    let totalEmpleador = 0.0
+    let totalAPagar = 0.0
     for(let i = 0; i < roles.length; i++){
         rol = roles[i]
         totalEmpleado += rol.aporteEmpleado
         totalEmpleador += rol.aporteEmpleador
         totalAPagar += rol.valorAPagar
-
     }
+    mostrarTexto("infoTotalPago",totalAPagar)
+    mostrarTexto("infoAporteEmpresa",totalEmpleador)
+    mostrarTexto("infoAporteEmpleado",totalEmpleado)
 }
 // agregarRol y agregarEmpleado - Son iguales
 // buscarRol y BuscarEmpleado - Son iguales
