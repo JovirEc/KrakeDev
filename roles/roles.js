@@ -5,10 +5,12 @@ let empleados = [
     {cedula:"0931657005",nombre:"JAVIER",apellido:"PETERBURGOS",sueldo:750.0}
 ]
 
-let roles = [{cedula: "1234567834",nombre: "Joel Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0},
+let roles = []
+
+/*let roles = [{cedula: "1234567834",nombre: "Joel Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0},
 {cedula: "1234526834",nombre: "Joell Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0},
 {cedula: "1474526834",nombre: "Joelll Villamar",valorAPagar: 10.0,aporteEmpleado: 20.0,aporteEmpleador: 30.0}
-]
+]*/
 
 mostrarOpcionEmpleado = function(){
     mostrarComponente("divEmpleado")
@@ -375,6 +377,7 @@ mostrarTotales = function(){
     let totalEmpleado = 0.0
     let totalEmpleador = 0.0
     let totalAPagar = 0.0
+    let totalNomina = 0.0
     for(let i = 0; i < roles.length; i++){
         rol = roles[i]
         totalEmpleado += rol.aporteEmpleado
@@ -384,6 +387,9 @@ mostrarTotales = function(){
     mostrarTexto("infoTotalPago",totalAPagar)
     mostrarTexto("infoAporteEmpresa",totalEmpleador)
     mostrarTexto("infoAporteEmpleado",totalEmpleado)
+
+    totalNomina = totalEmpleado+totalEmpleador+totalAPagar
+    mostrarTexto("infoTotalNomina",totalNomina)
 }
 // agregarRol y agregarEmpleado - Son iguales
 // buscarRol y BuscarEmpleado - Son iguales
