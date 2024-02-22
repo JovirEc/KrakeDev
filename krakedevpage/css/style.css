@@ -59,7 +59,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #343434;
+  color: #d9d9d9;
   text-align: left;
   background-color: #ffffff;
 }
@@ -152,13 +152,13 @@ sup {
 }
 
 a {
-  color: #F9A392;
+  color: rgba(255, 0, 0, 0.783);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #f56649;
+  color: rgb(255,0,0);
   text-decoration: underline;
 }
 
