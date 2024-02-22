@@ -59,9 +59,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #757575;
+  color: #343434;
   text-align: left;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2660,35 +2660,35 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #F9A392;
-  border-color: #F9A392;
+  color: #ffffff;
+  border-color: rgb(255,0,0);
 }
 
 .btn-outline-primary:hover {
-  color: #212529;
-  background-color: #F9A392;
-  border-color: #F9A392;
+  color: rgb(255,0,0);
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(249, 163, 146, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #F9A392;
+  color: #000000;
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #212529;
-  background-color: #F9A392;
-  border-color: #F9A392;
+  background-color: #dedede;
+  border-color: #dedede;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(249, 163, 146, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(142, 142, 142, 0.5);
 }
 
 .btn-outline-secondary {
@@ -6094,7 +6094,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #F9A392 !important;
+  background-color: black !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6154,7 +6154,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #0c0b0a !important;
+  background-color: #272727 !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -6164,7 +6164,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #211E1C !important;
+  background-color: rgb(20,20,20) !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -9597,17 +9597,17 @@ h6,
 }
 
 .bg-appointment {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/carousel-1.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/slider1.jpeg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-pricing {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/carousel-2.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/slider2.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bg-jumbotron {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/carousel-3.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/slider3.jpg), no-repeat center center;
   background-size: cover;
 }
 
@@ -9666,14 +9666,14 @@ h6,
   margin: 0 5px;
   width: 25px;
   height: 25px;
-  background: #FEF1EF;
-  border: 1px solid #F9A392;
+  background: #fff;
+  border: 1px solid rgb(255,0,0);
   transition: .5s;
 }
 
 .testimonial-carousel .owl-dot.active {
   width: 50px;
-  background: #F9A392;
+  background: rgb(255,0,0);
 }
 
 .footer p,
