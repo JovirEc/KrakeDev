@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedorBajo{
+    background-color: blue;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.contenedorAlto{
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ingresoDatos{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.contenidoDatos{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(80, 216, 239, 0.149);
+    border-radius: 10px;
+
+}
+.tituloCaja{
+    font-weight: 700;
+    
+}
+.cajaDatos{
+    width: 250px;
+}
+
+.tablaPrincipal{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.botonPrincipal{
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(19, 77, 109);
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+}

@@ -5,21 +5,34 @@
     <script src="utilitarios.js"></script>
     <link rel="stylesheet" href="orden.css">
 </head>
-<body>
+<body onload="mostrarTablaFn()">
     <div class="contenedorBajo">
         <div class="contenedorAlto">
-            <div class="titulo">TITULO</div>
-            <div class="ingresoDatos">
-                <div class="tituloCaja">INGRESE EL NOMBRE</div>
-                <input type="text" id="cajaNombre">
-                <div class="divError" id="lblErrorNombre"></div>
+            <div class="titulo">EVALUACIÓN KRAKEDEV</div>
+            <div class="contenidoDatos">
+                <div class="ingresoDatos">
+                    <div class="tituloCaja">NOMBRE</div>
+                    <input type="text" id="cajaNombre" class="cajaDatos">
+                    <div class="divError" id="lblErrorNombre"></div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCaja">EDAD</div>
+                    <input type="text" id="cajaEdad" class="cajaDatos">
+                    <div class="divError" id="lblErrorEdad"></div>
+                </div>
             </div>
-            <div class="ingresoDatos">
-                <div class="tituloCaja">INGRESE LA EDAD</div>
-                <input type="text" id="cajaEdad">
-                <div class="divError" id="lblErrorEdad"></div>
+            <input type="button" value="GUARDAR" class="botonPrincipal" onclick="agregarPersona()">
+            <div id="lblTabla" class="tablaPrincipal"></div>
+            <div class="boxMayorMenor">
+                <div class="PersonasMayorMenor">
+                    <input type="button" value="MAYOR" class="botonPrincipal" onclick="determinarMayor()">
+                    <div id="lblMayor"></div>
+                </div>
+                <div class="PersonasMayorMenor">
+                    <input type="button" value="MENOR" class="botonPrincipal" onclick="determinarMenor()">
+                    <div id="lblMenor"></div>
+                </div>
             </div>
-            <input type="button" value="GUARDAR" class="botonGuardar">
         </div>
     </div>
 </body>
