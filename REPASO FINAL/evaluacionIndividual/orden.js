@@ -98,6 +98,6 @@ determinarMenor = function(){
     let menor = encontrarMenor()
     let nombre = menor.nombre
     let edad = menor.edad
-    let texto = nombre+" es la persona mayor con "+edad+" años."
+    let texto = nombre+" es la persona menor con "+edad+" años."
     mostrarTexto("lblMenor",texto)
 }
